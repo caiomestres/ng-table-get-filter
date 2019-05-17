@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tabletest</title>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-messages.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.8.3/ng-table.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="testeTabela">
+  <h1> -> Como filtrar -></h1>
+  <div ng-controller="tabelaController">
+    <table ng-table="tableParams" class="table" show-filter="true">
+      <tbody>
+        <tr ng-repeat="row in items">
+          <td data-title="'Código'" filter="{Codigo: 'text'}" sortable="'Codigo'">{{ row.Codigo }}</td>
+          <td data-title="'Estado'"> {{ row.Estado }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <tbody>
+    <tr ng-repeat="row in $data">
+      <td data-title="'Name'" filter="{name: 'select'}" filter-data="names" sortable="'name'">{{ row.name }}</td>
+      <td data-title="'Age'" filter="{age: 'text'}" sortable="'age'">{{ row.age }}</td>
+    </tr>
+  </tbody>
+
+</body>
+
+</html>
