@@ -11,5 +11,17 @@ Node e npm instalados
 
 
 -------------
+
+Aqui jaz uma dúvida newbie. Tudo resolvido! 
+
+-Código atualizado com a solução
+
+
+<->
+
+OLD
+
+<->
+
 Context : Não há necessidade , no caso, de a cada filtro mandar requisição pro backend, 1 requisição basta pra trabalhar com os dados a partir daí. 
 Dúvida: O filtro com ng-table não funciona pois não tem 2-way data binding com data do NgTableParams. Como proceder pro filter funcionar ?
