@@ -17,7 +17,7 @@
   <div ng-controller="tabelaController">
     <table ng-table="tableParams" class="table" show-filter="true">
       <tbody>
-        <tr ng-repeat="row in items">
+        <tr ng-repeat="row in $data">
           <td data-title="'Código'" filter="{Codigo: 'text'}" sortable="'Codigo'">{{ row.Codigo }}</td>
           <td data-title="'Estado'"> {{ row.Estado }} </td>
         </tr>

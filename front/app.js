@@ -5,13 +5,12 @@ angular.module("testeTabela").controller("tabelaController", function ($http, $s
     $http
       .get('http://localhost:3412/clientes')
       .success(function (data1) {
-        $scope.items = data1.Data;
-        data = $scope.items
+        data = data1.Data;
+        $scope.tableParams = new NgTableParams({ page: 1, count: 10 }, { data: data });
 
       })
       .error(function (response, status, headers, config) {
         console.log(`Aconteceu um problema`);
       });
   })();
-  $scope.tableParams = new NgTableParams({ page: 1, count: 10 }, { data: $scope.items });
 });
